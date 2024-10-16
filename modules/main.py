@@ -49,9 +49,9 @@ async def account_login(bot: Client, m: Message):
        Ashu.START_TEXT, reply_markup=InlineKeyboardMarkup(
             [
                     [
-                    InlineKeyboardButton("✜ ᴀsʜᴜᴛᴏsʜ ɢᴏsᴡᴀᴍɪ 𝟸𝟺 ✜" ,url="https://t.me/AshutoshGoswami24") ],
+                    InlineKeyboardButton("✜ ᴀsʜᴜᴛᴏsʜ ɢᴏsᴡᴀᴍɪ 𝟸𝟺 ✜" ,url="https://t.me/Sonickuwalupdate") ],
                     [
-                    InlineKeyboardButton("🦋 𝐅𝐨𝐥𝐥𝐨𝐰 𝐌𝐞 🦋" ,url="https://t.me/AshuSupport") ]                               
+                    InlineKeyboardButton("🦋 𝐅𝐨𝐥𝐥𝐨𝐰 𝐌𝐞 🦋" ,url="https://t.me/KanhaContentbot") ]                               
             ]))
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
@@ -150,7 +150,7 @@ async def account_login(bot: Client, m: Message):
     try:
         for i in range(count - 1, len(links)):
 
-            V = links[i][1].replace("file/d/","uc?export=download&id=").replace("www.youtube-nocookie.com/embed", "youtu.be").replace("?modestbranding=1", "").replace("/view?usp=sharing","") # .replace("mpd","m3u8")
+            V = links[i][1].replace("file/d/","uc?export=download&id=").replace("www.youtube-nocookie.com/embed", "youtu.be").replace("www.youtube.com/live", "youtu.be").replace("www.youtube.com/embed", "youtu.be").replace("?modestbranding=1", "").replace("/view?usp=sharing","").replace("d3nzo6itypaz07", "d26g5bnklkwsh4").replace("dn6x93wafba93", "d26g5bnklkwsh4").replace("d2tiz86clzieqa", "d26g5bnklkwsh4").replace("vod.teachx.in", "d3igdi2k1ohuql.cloudfront.net").replace("downloadappx.appx.co.in", "d33g7sdvsfd029.cloudfront.net").replace("mpd","m3u8")
             url = "https://" + V
 
             if "visionias" in url:
@@ -181,8 +181,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[ 🎥 ] Vid_ID:** {str(count).zfill(3)}.** {𝗻𝗮𝗺𝗲𝟭}{MR}.mkv\n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**'
-                cc1 = f'**[ 📁 ] Pdf_ID:** {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**'
+                cc = f'**[ 🎥 ] Vid_ID: 💖 @KanhaContentbot ❤️** {str(count).zfill(3)}. **{𝗻𝗮𝗺𝗲𝟭}  {MR}  ({res}) .mp4\n\n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**\n\n**𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐃 𝐁𝐘 ➤ 🅘🅟🅢 🅛🅞🅥🅔🅡 @KanhaContentbot **'
+                cc1 = f'**[ 📁 ] Pdf_ID: 💖 @KanhaContentbot ❤️** {str(count).zfill(3)}. **{𝗻𝗮𝗺𝗲𝟭} {MR} .pdf \n\n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**\n\n**𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐃 𝐁𝐘 ➤ 🅘🅟🅢 🅛🅞🅥🅔🅡 @KanhaContentbot **'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -197,12 +197,12 @@ async def account_login(bot: Client, m: Message):
                 
                 elif ".pdf" in url:
                     try:
-                        cmd = f'yt-dlp -o "{name}.pdf" "{url}"'
+                        cmd = f'yt-dlp -o "@KanhaContentbot{name}.pdf" "{url}"'
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
-                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', caption=cc1)
+                        copy = await bot.send_document(chat_id=m.chat.id, document=f'@KanhaContentbot{name}.pdf', caption=cc1)
                         count += 1
-                        os.remove(f'{name}.pdf')
+                        os.remove(f'@KanhaContentbot{name}.pdf')
                     except FloodWait as e:
                         await m.reply_text(str(e))
                         time.sleep(e.x)
