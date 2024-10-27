@@ -181,8 +181,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**{str(count).zfill(3)}／{len(links)}🎥{𝗻𝗮𝗺𝗲𝟭}\n\n➢ 𝐁𝐚𝐭𝐜𝐡  ✶   **{raw_text0}**\n\n**────୨✶{mr}✶ৎ────**'
-                cc1 = f'**{str(count).zfill(3)}／{len(links)}📙{𝗻𝗮𝗺𝗲𝟭}\n\n➢ 𝐁𝐚𝐭𝐜𝐡  ✶   **{raw_text0}**\n\n**────୨✶{mr}✶ৎ────**'
+                cc = f'**{str(count).zfill(3)}／{len(links)}🎥{𝗻𝗮𝗺𝗲𝟭}\n\n➢ 𝐁𝐚𝐭𝐜𝐡  ✶   **{raw_text0}**\n\n**────୨✶{MR}✶ৎ────**'
+                cc1 = f'**{str(count).zfill(3)}／{len(links)}📙{𝗻𝗮𝗺𝗲𝟭}\n\n➢ 𝐁𝐚𝐭𝐜𝐡  ✶   **{raw_text0}**\n\n**────୨✶{MR}✶ৎ────**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
