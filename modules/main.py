@@ -49,13 +49,13 @@ async def account_login(bot: Client, m: Message):
        Ashu.START_TEXT, reply_markup=InlineKeyboardMarkup(
             [
                     [
-                    InlineKeyboardButton("✜ ᴀsʜᴜᴛᴏsʜ ɢᴏsᴡᴀᴍɪ 𝟸𝟺 ✜" ,url="https://t.me/Sonickuwalupdate") ],
+                    InlineKeyboardButton("✜ join 𝟸𝟺 ✜" ,url="https://t.me/+tNYMEBEYwfJiOWE1") ],
                     [
-                    InlineKeyboardButton("🦋 𝐅𝐨𝐥𝐥𝐨𝐰 𝐌𝐞 🦋" ,url="https://t.me/KanhaContentbot") ]                               
+                    InlineKeyboardButton("🦋 𝐅𝐨𝐥𝐥𝐨𝐰 𝐌𝐞 🦋" ,url="https://t.me/mirrortxtbot") ]                               
             ]))
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
-    await m.reply_text("♦ 𝐒𝐭𝐨𝐩𝐩𝐞𝐭 ♦", True)
+    await m.reply_text("♦ 𝐒𝐭𝐨𝐩𝐩𝐞𝐝 ♦", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
@@ -181,9 +181,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[ 🎥 ] Vid_ID: 💖 @KanhaContentbot ❤️** {str(count).zfill(3)}. **{𝗻𝗮𝗺𝗲𝟭}  {MR}  ({res}) .mp4\n\n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**\n\n**𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐃 𝐁𝐘 ➤ 🅘🅟🅢 🅛🅞🅥🅔🅡 @KanhaContentbot **'
-                cc1 = f'**[ 📁 ] Pdf_ID: 💖 @KanhaContentbot ❤️** {str(count).zfill(3)}. **{𝗻𝗮𝗺𝗲𝟭} {MR} .pdf \n\n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**\n\n**𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐃 𝐁𝐘 ➤ 🅘🅟🅢 🅛🅞🅥🅔🅡 @KanhaContentbot **'
-                if "drive" in url:
+                cc = f'**{str(count).zfill(3)}／{len(links)}🎥{𝗻𝗮𝗺𝗲𝟭}\n\n➢ 𝐁𝐚𝐭𝐜𝐡  ✶   **{raw_text0}**\n\n**────୨✶{mr}✶ৎ────**'
+                cc1 = f'**{str(count).zfill(3)}／{len(links)}📙{𝗻𝗮𝗺𝗲𝟭}\n\n➢ 𝐁𝐚𝐭𝐜𝐡  ✶   **{raw_text0}**\n\n**────୨✶{mr}✶ৎ────**'  if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
@@ -197,12 +196,12 @@ async def account_login(bot: Client, m: Message):
                 
                 elif ".pdf" in url:
                     try:
-                        cmd = f'yt-dlp -o "@KanhaContentbot{name}.pdf" "{url}"'
+                        cmd = f'yt-dlp -o "{name}.pdf" "{url}"'
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
                         copy = await bot.send_document(chat_id=m.chat.id, document=f'@KanhaContentbot{name}.pdf', caption=cc1)
                         count += 1
-                        os.remove(f'@KanhaContentbot{name}.pdf')
+                        os.remove(f'{name}.pdf')
                     except FloodWait as e:
                         await m.reply_text(str(e))
                         time.sleep(e.x)
@@ -238,10 +237,7 @@ async def main():
         print(f"Web server started on port {PORT}")
 
 if __name__ == "__main__":
-    print("""
-    █░█░█ █▀█ █▀█ █▀▄ █▀▀ █▀█ ▄▀█ █▀▀ ▀█▀     ▄▀█ █▀ █░█ █░█ ▀█▀ █▀█ █▀ █░█   
-    ▀▄▀▄▀ █▄█ █▄█ █▄▀ █▄▄ █▀▄ █▀█ █▀░ ░█░     █▀█ ▄█ █▀█ █▄█ ░█░ █▄█ ▄█ █▀█ """)
-
+    
     # Start the bot and web server concurrently
     async def start_bot():
         await bot.start()
