@@ -12,23 +12,23 @@
     "stack": "heroku-22",
     "env": {
         "API_ID": {
-            "description": "23728809",
+            "description": "22812640",
             "required": true
         },
         "API_HASH": {
-            "description": "5d7165501181e2ef8000f333fe529678",
+            "description": "a03d3210acc79992955563c9de77f795",
             "required": true
         },
         "BOT_TOKEN": {
-            "description": "7764340374:AAH4xgZO5f0OGbtMR2C9koVWXeqP-vAi9LY",
+            "description": "7868606343:AAEs0pQLKdrMuw-O9FCf7d8IhDkc3_KBg14",
             "required": true
         },
         "OWNER_ID": {
-            "description": "7300483064",
+            "description": "1260699325",
             "required": true
         },
         "SUDO_USERS": {
-            "description": "7901907793 1260699325",
+            "description": "7901907793 1260699325 7766469355 5489195865",
             "required": true
         }
     },
